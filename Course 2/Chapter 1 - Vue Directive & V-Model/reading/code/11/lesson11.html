@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Berkenalan dengan Vue</title>
+    </head>
+    <body>
+        <div id="app">
+            <!-- v-model checkbox -->
+            <label>Berenang</label>
+            <input type="checkbox" v-model="checkbox" value="berenang">
+            <label>Menyelam</label>
+            <input type="checkbox" v-model="checkbox" value="menyelam">
+            <label>Memanah</label>
+            <input type="checkbox" v-model="checkbox" value="memanah">
+            <label>Berkuda</label>
+            <input type="checkbox" v-model="checkbox" value="berkuda">
+            <br>
+            <h3>Format array: </h3>
+            <h1>{{checkbox}}</h1>
+            <br>
+            <!-- tampilin dengan list -->
+            <h3>Format list: </h3>
+            <ul>
+                <li v-for="pilihanku in checkbox">{{pilihanku}}</li>
+            </ul>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    checkbox: []
+                }
+            })
+        </script>
+    </body>
+</html>

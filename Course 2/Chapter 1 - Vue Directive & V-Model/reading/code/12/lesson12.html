@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Berkenalan dengan Vue</title>
+    </head>
+    <body>
+        <div id="app">
+            <select v-model="kerjaanAnakku" multiple>
+                <option value="" disabled>Kerjaan Anakku</option>
+                <option value="pilot">pilot</option>
+                <option value="dokter">dokter</option>
+                <option value="pengusaha">pengusaha</option>
+            </select>
+            <br>
+            <h3>Format Array: </h3>
+            <h1>{{kerjaanAnakku}}</h1>
+            <!-- tampilin multiple value -->
+            <h3>Format List: </h3>
+            <ul>
+                <li v-for="anakku in kerjaanAnakku">{{anakku}}</li>
+            </ul>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    kerjaanAnakku: []
+                }
+            })
+        </script>
+    </body>
+</html>

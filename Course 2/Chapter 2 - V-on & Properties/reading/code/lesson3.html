@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Berkenalan dengan Vue</title>
+    </head>
+    <body>
+        <div id="app">
+            Hasil penjumlahan {{angka1}} ditambah {{angka2}} adalah {{penjumlahan}}
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    angka1: 60,
+                    angka2: 40
+                },
+                computed: {
+                    penjumlahan: function () {
+                        return this.angka1 + this.angka2
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
